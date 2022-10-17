@@ -1,9 +1,9 @@
-var listname = []
+// Get the modal
+var modal = document.getElementById('id01');
 
-const email = document.getElementById('email')
-
-function display() {
-    document.getElementById('email').value
-    email.push(listname)
-
+// when the user clicks anywhere outside of modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
