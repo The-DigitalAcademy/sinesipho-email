@@ -1,9 +1,14 @@
-// Get the modal
-var modal = document.getElementById('id01');
-
-// when the user clicks anywhere outside of modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+function sendEmail() {
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "username",
+        Password : "password",
+        To : 'them@website.com',
+        From : "you@isp.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+} 
+sendEmail()
